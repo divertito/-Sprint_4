@@ -2,7 +2,7 @@ package ru.yandex.praktikum;
 
 import org.openqa.selenium.*;
 
-public class OrderInfo extends BaseInfo{
+public class OrderInfo extends BaseInfo {
     //кнопка "Заказать" в хэдере
     private By orderButtonInHeader = By.xpath(".//div[@class='Header_Nav__AGCXC']/button[@class='Button_Button__ra12g']");
     //кнопка "Заказать" внизу страницы
@@ -38,7 +38,7 @@ public class OrderInfo extends BaseInfo{
     private By confirmPopup = By.className("Order_ModalHeader__3FDaJ");
 
 
-    protected OrderInfo(WebDriver driver){
+    protected OrderInfo(WebDriver driver) {
         super(driver);
     }
 
@@ -67,8 +67,8 @@ public class OrderInfo extends BaseInfo{
     }
 
     public void selectMetroStation() {
-       driver.findElement(metroStation).click();
-       driver.findElement(metroList).click();
+        driver.findElement(metroStation).click();
+        driver.findElement(metroList).click();
     }
 
     public void clickNextButton() {
@@ -106,12 +106,13 @@ public class OrderInfo extends BaseInfo{
         return confirmPopupText;
     }
 
-    public void scrollWindow(){
+    public void scrollWindow() {
         WebElement element = driver.findElement(orderButtonInPage);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
-    public String createOrderHeaderButton (String firstName, String secondName, String userAddress, String phoneNumber, String commentText){
+
+    public String createOrderHeaderButton(String firstName, String secondName, String userAddress, String phoneNumber, String commentText) {
         OrderInfo orderInfo = new OrderInfo(driver);
         setCloseCookies();
         clickOrderButtonInHeader();
@@ -132,7 +133,7 @@ public class OrderInfo extends BaseInfo{
         return checkText;
     }
 
-    public String createOrderMiddleButton (String firstName, String secondName, String userAddress, String phoneNumber, String commentText){
+    public String createOrderMiddleButton(String firstName, String secondName, String userAddress, String phoneNumber, String commentText) {
         OrderInfo orderInfo = new OrderInfo(driver);
         setCloseCookies();
         scrollWindow();

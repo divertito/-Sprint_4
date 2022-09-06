@@ -12,13 +12,15 @@ public abstract class BaseInfo {
     //логотип Яндекса
     private By yaLogo = By.className("Header_LogoYandex__3TSOI");
 
-    protected static void setCloseCookies(){
+    protected static void setCloseCookies() {
         driver.findElement(closeCookies).click();
     }
+
     protected void clickScooterLogo() {
         driver.findElement(scooterLogo).click();
     }
-    protected void clickYaLogo(){
+
+    protected void clickYaLogo() {
         driver.findElement(yaLogo).click();
     }
 

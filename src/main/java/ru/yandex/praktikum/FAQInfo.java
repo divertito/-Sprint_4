@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FAQInfo extends BaseInfo {
     //Вопросы о важном
@@ -48,64 +50,88 @@ public class FAQInfo extends BaseInfo {
     protected void openFirstQuestion() {
         driver.findElement(accFirstQuestion).click();
     }
-    protected String checkFirstAnswer(){
+
+    protected String checkFirstAnswer() {
         String price = driver.findElement(accFirstAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(accFirstAnswer));
         return price;
     }
 
     protected void openSecondQuestion() {
         driver.findElement(accSecondQuestion).click();
     }
-    protected String checkSecondAnswer(){
+
+    protected String checkSecondAnswer() {
         String multScooters = driver.findElement(accSecondAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(accSecondAnswer));
         return multScooters;
     }
 
     protected void openThirdQuestion() {
         driver.findElement(accThirdQuestion).click();
     }
-    protected String checkThirdAnswer(){
+
+    protected String checkThirdAnswer() {
         String rentPeriod = driver.findElement(accThirdAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(accThirdAnswer));
         return rentPeriod;
     }
 
     protected void openFourthQuestion() {
         driver.findElement(accFourthQuestion).click();
     }
-    protected String checkFourthAnswer(){
+
+    protected String checkFourthAnswer() {
         String todayRent = driver.findElement(getAccFourthAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(getAccFourthAnswer));
         return todayRent;
     }
 
     protected void openFifthQuestion() {
         driver.findElement(accFifthQuestion).click();
     }
-    protected String checkFifthAnswer(){
+
+    protected String checkFifthAnswer() {
         String returnDate = driver.findElement(getAccFifthAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(getAccFifthAnswer));
         return returnDate;
     }
 
     protected void openSixthQuestion() {
         driver.findElement(accSixthQuestion).click();
     }
-    protected String checkSixthAnswer(){
+
+    protected String checkSixthAnswer() {
         String charge = driver.findElement(getAccSixthAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(getAccSixthAnswer));
         return charge;
     }
 
     protected void openSeventhQuestion() {
         driver.findElement(accSeventhQuestion).click();
     }
-    protected String checkSeventhAnswer(){
+
+    protected String checkSeventhAnswer() {
         String decline = driver.findElement(getAccSeventhAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(getAccSeventhAnswer));
         return decline;
     }
 
     protected void openEightQuestion() {
         driver.findElement(accEightQuestion).click();
     }
-    protected String checkEightAnswer(){
+
+    protected String checkEightAnswer() {
         String mcad = driver.findElement(getAccEightAnswer).getText();
+        new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.visibilityOfElementLocated(getAccEightAnswer));
         return mcad;
     }
 
