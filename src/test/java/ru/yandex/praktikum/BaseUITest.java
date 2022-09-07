@@ -28,7 +28,6 @@ public class BaseUITest {
         driver.get("https://qa-scooter.praktikum-services.ru/");
         //раскрыть окно на весь экран
         driver.manage().window().maximize();
-
     }
 
     @After

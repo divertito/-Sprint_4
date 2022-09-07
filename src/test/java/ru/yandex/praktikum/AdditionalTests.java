@@ -8,7 +8,6 @@ public class AdditionalTests extends BaseUITest {
         AdditionalInfo additionalInfo = new AdditionalInfo(driver);
         additionalInfo.scooterLogoClick();
     }
-
     @Test
     public void checkYandexPageOpens() {
         AdditionalInfo additionalInfo = new AdditionalInfo(driver);

@@ -37,7 +37,6 @@ public class OrderInfo extends BaseInfo {
     //всплывающее окно с сообщением об успешном создании заказа.
     private By confirmPopup = By.className("Order_ModalHeader__3FDaJ");
 
-
     protected OrderInfo(WebDriver driver) {
         super(driver);
     }
